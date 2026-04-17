@@ -1,0 +1,85 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #101826;
+  color: #f5f7fb;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #d0d8e6;
+}
+
+.panel {
+  background: #17253b;
+  border: 1px solid #2e3f5b;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+input {
+  border: 1px solid #41557a;
+  border-radius: 10px;
+  background: #0f192d;
+  color: #eef3ff;
+  padding: 10px 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #597ef7;
+  color: white;
+  font-weight: 600;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.player-wrap {
+  background: #17253b;
+  border: 1px solid #2e3f5b;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.plyr {
+  border-radius: 12px;
+  overflow: hidden;
+}
