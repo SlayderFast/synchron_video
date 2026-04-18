@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchron Video</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Synchron Video</h1>
+      <p class="description">
+        Смотрите видео вместе: play/pause и перемотка синхронизируются в одной комнате.
+      </p>
+
+      <section class="panel">
+        <div class="row">
+          <label for="roomId">Комната</label>
+          <input id="roomId" placeholder="Например: movie-night" />
+        </div>
+
+        <div class="row">
+          <label for="videoUrl">Ссылка на видео</label>
+          <input
+            id="videoUrl"
+            placeholder="Прямая ссылка (.mp4) / YouTube / Vimeo"
+          />
+        </div>
+
+        <div class="actions">
+          <button id="joinBtn">Войти в комнату</button>
+          <button id="loadBtn" disabled>Загрузить видео</button>
+        </div>
+
+        <div class="row">
+          <label for="shareLink">Ссылка для друга</label>
+          <div class="share-group">
+            <input id="shareLink" readonly placeholder="Ссылка появится после входа в комнату" />
+            <button id="copyBtn" disabled>Копировать</button>
+          </div>
+        </div>
+
+        <p id="status">Статус: не подключено</p>
+        <p id="users">Участников в комнате: 0</p>
+      </section>
+
+      <section class="player-wrap">
+        <div id="playerContainer"></div>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
